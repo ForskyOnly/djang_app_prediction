@@ -1,0 +1,14 @@
+
+<html>
+<head>
+	<title>Résultats de la prédiction de prix</title>
+</head>
+<body>
+	<h1>Résultats de la prédiction de prix</h1>
+	{% if prix_predit %}
+		<p>Le prix prédit est : {{ prix_predit }} euros</p>
+	{% else %}
+		<p>Aucun prix n'a été prédit.</p>
+	{% endif %}
+</body>
+</html>

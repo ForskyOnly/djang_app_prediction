@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Estimez Votre Maison</title>
+  </head>
+  <body>
+    <h1>Estimez Votre maison</h1>
+    <form method="POST" action="{% url 'prediction_prix' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Estimer</button>
+    </form>
+    {% if prix_predit %}
+      <p>Le prix prédit est: {{ prix_predit }}</p>
+    {% endif %}
+  </body>
+</html>
