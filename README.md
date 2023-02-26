@@ -1,0 +1,1 @@
+# djang_app_prediction
