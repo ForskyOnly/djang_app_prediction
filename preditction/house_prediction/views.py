@@ -28,7 +28,7 @@ def prediction_prix(request):
             else:
                 lat = 0.0
                 long = 0.0
-            prix_predit = modele.predict([[srf_de_vie, chambres, qual_global, qual_vue, lat, long, vue_mer]])
+            prix_predit = modele.predict([[srf_de_vie, chambres, qual_global, qual_vue, lat, long, vue_mer]]).round(2)
             modele_donnees = ModelPrediction(
                 srf_de_vie=srf_de_vie,
                 chambres=chambres,

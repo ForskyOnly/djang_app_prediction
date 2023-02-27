@@ -1,12 +1,12 @@
 
 <html>
 <head>
-	<title>Résultats de la prédiction de prix</title>
+	<title>Prix de votre maison</title>
 </head>
 <body>
-	<h1>Résultats de la prédiction de prix</h1>
+	<h1>Résultats de la prédiction</h1>
 	{% if prix_predit %}
-		<p>Le prix prédit est : {{ prix_predit }} euros</p>
+		<p>Le prix de votre bien est éstimée à : {{ prix_predit }} $</p>
 	{% else %}
 		<p>Aucun prix n'a été prédit.</p>
 	{% endif %}

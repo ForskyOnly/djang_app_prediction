@@ -24,12 +24,24 @@ class PredictionForm(forms.ModelForm):
         (13, '13')
         
     )
+    VUE_MER = (
+        (0,'non'),
+        (1,'oui')
+    )
+    
+    QUAL_VUE = (
+        (0,'Vue correct'),
+        (1,'Vue normale'),
+        (2,'Belle vue'),
+        (3,'Trés belle vue'),
+        (4,'Vue exceptionnel')
+    )
 
-    srf_de_vie = forms.IntegerField(label='Surface habitable',widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Surface de vie'}))
-    chambres = forms.IntegerField(label='Nombres de chambres',widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre de chambres'}))
-    qual_global = forms.ChoiceField(label='Qualité globale de la maison',choices=QUAL_CHOICES, widget=forms.Select(attrs={'class': 'form-control'}))
-    qual_vue = forms.ChoiceField(label='Qualité de la vue',choices=[(0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4')], widget=forms.Select(attrs={'class': 'form-control'}))
-    adresse = forms.CharField(label='Adresse',widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Adresse'}))
-    vue_mer = forms.ChoiceField(choices=[(0, '0'), (1, '1')],widget=forms.Select(attrs={'class': 'form-check-input'}))
+    srf_de_vie = forms.IntegerField(label='Surface habitable en sqft', widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Espace de vie intérieur'}))
+    chambres = forms.IntegerField(label='Nombres de chambres', widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Nombre de chambres'}))
+    qual_global = forms.ChoiceField(label='Qualité globale de la maison', choices=QUAL_CHOICES, widget=forms.Select(attrs={'class': 'form-control'}))
+    qual_vue = forms.ChoiceField(label='Qualité de la vue', choices=QUAL_VUE, widget=forms.Select(attrs={'class': 'form-control'}))
+    adresse = forms.CharField(label='Adresse', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Adresse'}))
+    vue_mer = forms.ChoiceField(choices=VUE_MER, widget=forms.Select(attrs={'class': 'form-check-input'}))
 
 
