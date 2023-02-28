@@ -18,6 +18,7 @@ def prediction_prix(request):
             qual_vue = form.cleaned_data['qual_vue']
             adresse = form.cleaned_data['adresse']
             vue_mer = form.cleaned_data['vue_mer']
+            sd_bain = form.cleaned_data['sd_bain']
             vue_mer_int = 1 if vue_mer else 0
             url = 'https://maps.googleapis.com/maps/api/geocode/json'
             params = {'address': adresse, 'key': 'AIzaSyCc0czRgbH_uyyw5W0zc6ieYfSUh2UqN78'}
@@ -28,7 +29,7 @@ def prediction_prix(request):
             else:
                 lat = 0.0
                 long = 0.0
-            prix_predit = modele.predict([[srf_de_vie, chambres, qual_global, qual_vue, lat, long, vue_mer]]).round(2)
+            prix_predit = modele.predict([[srf_de_vie, chambres, qual_global, qual_vue, lat, long, vue_mer, sd_bain]]).round(1)
             modele_donnees = ModelPrediction(
                 srf_de_vie=srf_de_vie,
                 chambres=chambres,
@@ -38,6 +39,7 @@ def prediction_prix(request):
                 lat=lat,
                 long=long,
                 vue_mer=vue_mer,
+                sd_bain=sd_bain,
                 prix_predit=prix_predit[0])
             modele_donnees.save()
             return render(request, 'resultat.html', {'prix_predit': prix_predit[0]})
