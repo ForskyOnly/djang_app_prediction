@@ -68,7 +68,7 @@ class PredictionForm(forms.ModelForm):
         (7.25, '7.25'),
         (7.50, '7.5'),
         (7.75, '7.75'),
-        (8.00, 'autres')
+        (8.00, 'autre')
         
 
     )

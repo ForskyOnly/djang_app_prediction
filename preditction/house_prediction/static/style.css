@@ -101,7 +101,7 @@ button:hover{
   color:#ECF8F6
 }
 
-.cible p:nth-of-type(4):hover + .qual_vue_help {
+.cible p:nth-of-type(6):hover + .qual_vue_help {
   padding-top: 10px;
   display: block;
   text-align: justify;
@@ -121,10 +121,28 @@ button:hover{
   color:#ECF8F6
 }
 
-.cible p:nth-of-type(7):hover + .adresse_help {
+.cible p:nth-of-type(9):hover + .adresse_help {
   padding-top: 10px;
   display: block;
   text-align: center;
   
 }
 
+.qual_help {
+  display: none;
+  color: #8b8b8b;
+  text-align: justify;
+}
+
+
+.qual_help span{
+  font-weight: bold;
+  color:#ECF8F6
+}
+
+.cible p:nth-of-type(3):hover + .qual_help {
+  padding-top: 10px;
+  display: block;
+  text-align: center;
+  
+}
