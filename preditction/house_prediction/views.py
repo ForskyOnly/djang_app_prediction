@@ -9,6 +9,10 @@ with open('house_prediction/data/modele_knn.pkl', 'rb') as fichier:
     modele = pickle.load(fichier)
     
 def prediction_prix(request):
+    """
+    Fonction qui prends les variables renseigner par l'utilisateur
+    et retourne le prix de prédiction d'une maison
+    """
     form = PredictionForm(request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
