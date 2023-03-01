@@ -6,9 +6,9 @@ Version 1.0
 ## Description du Projet
 
 Ce projet a été réalisé lors de la formation Tech IA chez Simplon HDF. L'objectif est de crée une application web contenant un modéle pour prédire des prix de maisons.
-Le projet est directement lié [à ce projet**](https://github.com/ForskyOnly/ml_data_analyse_modelisation) et fais partie de la 4eme étape : l'implantation du modéle dans l'application.
+Le projet est directement lié [à ce projet **](https://github.com/ForskyOnly/ml_data_analyse_modelisation) et fais partie de la 4eme étape : l'implantation du modéle dans l'application.
 
-**Cliquez pour en savoir plus sur les étapes précedantes : le nettoyage, la préparation et la modélisation.
+** Cliquez pour en savoir plus sur les étapes précedantes : le nettoyage, la préparation et la modélisation.
 
 
 ### Contexte du projet
