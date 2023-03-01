@@ -1,0 +1,28 @@
+{% load static %}
+
+<html>
+
+  <head>
+    <title>Estimez Votre Bien</title>
+    <link rel="stylesheet" href="{% static "resultat.css" %}" />
+  </head>
+
+  <body>
+
+    <div class="resultat">
+      {% if prix_predit %}
+        <p>Le prix de votre bien est éstimée à : {{ prix_predit }} $</p>
+      {% else %}
+        <p>Aucun prix n'a été prédit.</p>
+      {% endif %}
+	  
+		<div class="button">
+			<a href="{% url 'prediction_prix' %}">
+			<button>Estimer à nouveau</button>
+			</a>
+		</div>
+    </div>
+
+  </body>
+
+</html>
