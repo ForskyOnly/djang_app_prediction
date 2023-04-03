@@ -25,7 +25,7 @@ def prediction_prix(request):
             sd_bain = form.cleaned_data['sd_bain']
             vue_mer_int = 1 if vue_mer else 0
             url = 'https://maps.googleapis.com/maps/api/geocode/json'
-            params = {'address': adresse, 'key': 'AIzaSyCc0czRgbH_uyyw5W0zc6ieYfSUh2UqN78'}
+            params = {'address': adresse, 'key': "YOUR_API_KEY"}
             response = requests.get(url, params=params).json()
             if response['status'] == 'OK':
                 lat = response['results'][0]['geometry']['location']['lat']
